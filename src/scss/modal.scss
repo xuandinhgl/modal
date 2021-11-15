@@ -1,0 +1,87 @@
+.xdi-modal {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+
+  &.in {
+    z-index: 9999;
+    opacity: 1;
+  }
+}
+
+.xdi-modal__backdrop {
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(#505050, 0.5);
+}
+
+.xdi-modal__dialog {
+  z-index: 3;
+  max-width: 90%;
+  background: #fff;
+  position: relative;
+  border-radius: 8px;
+  padding: 30px 15px;
+  transform: scale(0.8);
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+.xdi-modal.in .xdi-modal__dialog {
+  transform: scale(1);
+}
+
+.xdi-modal__close {
+  top: -6px;
+  z-index: 9;
+  right: -6px;
+  width: 26px;
+  height: 26px;
+  border: none;
+  opacity: 0.9;
+  outline: none;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #505050;
+
+  &:before,
+  &:after {
+    top: 5px;
+    width: 1px;
+    left: 13px;
+    content: '';
+    height: 16px;
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.xdi-modal__inner {
+  max-height: 80vh;
+  overflow-y: auto;
+
+  @media (min-width: 1024px) {
+    max-height: 90vh;
+  }
+}
