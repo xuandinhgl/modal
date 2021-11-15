@@ -29,14 +29,14 @@ SCSS
 
 - In browsers.
 ```html
-<!-- Using with button -->
 <head>
     <link rel="stylesheet" href="https://unpkg.com/@xuandinhgl/simple-modal@:0.1.0/dist/css/modal.css">
 </head>
 <body>
-    <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#demo-modal">Open modal</a>
-    
     <!-- Using with anchor -->
+    <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#demo-modal">Open modal</a>    
+    
+    <!-- Using with button -->
     <button class="btn btn-primary" data-toggle="modal" data-target="#demo-modal">Open modal</button>
     
     <div id="demo-modal" class="xdi-modal">
