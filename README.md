@@ -30,26 +30,32 @@ SCSS
 - In browsers.
 ```html
 <!-- Using with button -->
-<a class="btn btn-primary" href="#" data-toggle="modal" data-target="#demo-modal">Open modal</a>
-
-<!-- Using with anchor -->
-<button class="btn btn-primary" data-toggle="modal" data-target="#demo-modal">Open modal</button>
-
-<div id="demo-modal" class="xdi-modal">
-    <div class="xdi-modal__backdrop js-modal-backdrop"></div>
-    <div class="xdi-modal__dialog">
-        <button class="xdi-modal__close js-modal-close"></button>
-        <div class="xdi-modal__inner">
-            <h3>Modal title</h3>
-            <p>Modal body</p>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/@xuandinhgl/simple-modal@:0.1.0/dist/css/modal.css">
+</head>
+<body>
+    <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#demo-modal">Open modal</a>
+    
+    <!-- Using with anchor -->
+    <button class="btn btn-primary" data-toggle="modal" data-target="#demo-modal">Open modal</button>
+    
+    <div id="demo-modal" class="xdi-modal">
+        <div class="xdi-modal__backdrop js-modal-backdrop"></div>
+        <div class="xdi-modal__dialog">
+            <button class="xdi-modal__close js-modal-close"></button>
+            <div class="xdi-modal__inner">
+                <h3>Modal title</h3>
+                <p>Modal body</p>
+            </div>
         </div>
     </div>
-</div>
-<script>
-    window.addEventListener('DOMContentLoaded', function() {
-        modal();
-    })
-</script>
+    <script src="https://unpkg.com/@xuandinhgl/simple-modal@:0.1.0/dist/js/modal.umd.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            modal();
+        })
+    </script>
+</body>
 ```
 
 If you want to add `preventDefault` or `stopPropagation` to anchor, just add `data-prevent="true"`
